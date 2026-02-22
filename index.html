@@ -14,11 +14,11 @@
     <div class="logo">Aevon Talent</div>
     <div class="nav-links">
       <a href="#over-ons">Over ons</a>
-      <a href="#diensten">Wat we doen</a>
-      <a href="#profielen">IT Profielen</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#profielen">Profielen</a>
       <a href="#werkwijze">Werkwijze</a>
     </div>
-    <button class="nav-cta">Contact</button>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView()">Contact</button>
     <div class="nav-hamburger">
       <span></span><span></span><span></span>
     </div>
@@ -35,7 +35,7 @@
       </h1>
       <div class="bottom-row">
         <p>Aevon Talent begeleidt organisaties bij het vinden en plaatsen van senior IT professionals. Wij werken selectief, persoonlijk en zonder omwegen.</p>
-        <button class="cta">Neem contact op →</button>
+        <button class="cta" onclick="document.getElementById('contact').scrollIntoView()">Neem contact op →</button>
       </div>
     </div>
     <div class="marquee-wrapper">
@@ -64,28 +64,28 @@
   <!-- OVER ONS -->
   <section class="about" id="over-ons">
     <div class="about-grid">
-      <div class="about-image">
+      <div class="about-image fade-left">
         <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Team aan het werk">
       </div>
-      <div class="about-text fade-right">
-        <div class="section-label fade-up">Over ons</div>
-        <h2 class="fade-up">Wij kennen de IT markt van binnenuit</h2>
+      <div class="about-text">
+        <div class="section-label">Over ons</div>
+        <h2>Wij kennen de IT <br>markt van binnenuit</h2>
         <p>Aevon Talent is een gespecialiseerd detachering- en wervingsbureau voor IT professionals. Wij richten ons uitsluitend op het hogere segment — van senior developers tot enterprise architects.</p>
         <p>Onze aanpak is direct en persoonlijk. Geen grote databases, geen geautomatiseerde matches. Wij kennen onze kandidaten en begrijpen de uitdagingen van onze opdrachtgevers.</p>
         <div class="about-stats">
-          <div class="stat scale-in delay-1">
+          <div class="stat">
             <div class="stat-number">8<span>+</span></div>
             <div class="stat-label">Jaar actief in IT recruitment</div>
           </div>
-          <div class="stat scale-in delay-2">
+          <div class="stat">
             <div class="stat-number">200<span>+</span></div>
             <div class="stat-label">Plaatsingen gerealiseerd</div>
           </div>
-          <div class="stat scale-in delay-3">
+          <div class="stat">
             <div class="stat-number">94<span>%</span></div>
             <div class="stat-label">Succesrate bij plaatsingen</div>
           </div>
-          <div class="stat scale-in delay-4">
+          <div class="stat">
             <div class="stat-number">48<span>u</span></div>
             <div class="stat-label">Gemiddelde eerste reactie</div>
           </div>
@@ -96,11 +96,11 @@
 
   <!-- DIENSTEN -->
   <section id="diensten">
-    <div class="section-label fade-up">Wat we doen</div>
-    <h2 class="fade-up">Onze diensten</h2>
-    <p class="section-intro fade-up">Wij bieden drie kernoplossingen voor organisaties die op zoek zijn naar IT talent op hoog niveau.</p>
+    <div class="section-label">Wat we doen</div>
+    <h2>Onze diensten</h2>
+    <p class="section-intro">Wij bieden drie kernoplossingen voor organisaties die op zoek zijn naar IT talent op hoog niveau.</p>
     <div class="diensten-grid">
-      <div class="dienst-card scale-in delay-1">
+      <div class="dienst-card">
         <div class="dienst-img">
           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="IT Detachering">
         </div>
@@ -112,7 +112,7 @@
           <p>Tijdelijke inzet van senior IT professionals voor projecten, vervangingen of capaciteitsuitbreidingen. Flexibel en snel inzetbaar.</p>
         </div>
       </div>
-      <div class="dienst-card scale-in delay-2">
+      <div class="dienst-card">
         <div class="dienst-img">
           <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" alt="Werving en Selectie">
         </div>
@@ -124,7 +124,7 @@
           <p>Vaste plaatsing van IT specialisten die naadloos aansluiten bij uw organisatie. Wij zoeken tot de juiste match gevonden is.</p>
         </div>
       </div>
-      <div class="dienst-card scale-in delay-3">
+      <div class="dienst-card">
         <div class="dienst-img">
           <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Interim Management">
         </div>
@@ -141,32 +141,32 @@
 
   <!-- IT PROFIELEN -->
   <section class="profielen" id="profielen">
-    <div class="section-label fade-up">IT Profielen</div>
-    <h2 class="fade-up">Specialisaties</h2>
-    <p class="section-intro fade-up">Wij plaatsen professionals in uiteenlopende IT disciplines, van development tot architectuur en management.</p>
+    <div class="section-label">IT Profielen</div>
+    <h2>Specialisaties</h2>
+    <p class="section-intro">Wij plaatsen professionals in uiteenlopende IT disciplines, van development tot architectuur en management.</p>
     <div class="profielen-grid">
-      <div class="profiel-tag fade-up delay-1">Backend Developer</div>
-      <div class="profiel-tag fade-up delay-1">Frontend Developer</div>
-      <div class="profiel-tag fade-up delay-2">Software Engineer</div>
-      <div class="profiel-tag fade-up delay-2">Cloud Architect</div>
-      <div class="profiel-tag fade-up delay-3">DevOps Engineer</div>
-      <div class="profiel-tag fade-up delay-3">Data Engineer</div>
-      <div class="profiel-tag fade-up delay-4">Security Specialist</div>
-      <div class="profiel-tag fade-up delay-4">Solution Architect</div>
-      <div class="profiel-tag fade-up delay-1">IT Project Manager</div>
-      <div class="profiel-tag fade-up delay-2">Product Owner</div>
-      <div class="profiel-tag fade-up delay-3">Scrum Master</div>
-      <div class="profiel-tag fade-up delay-4">IT Manager</div>
+      <div class="profiel-tag">Backend Developer</div>
+      <div class="profiel-tag">Frontend Developer</div>
+      <div class="profiel-tag">Software Engineer</div>
+      <div class="profiel-tag">Cloud Architect</div>
+      <div class="profiel-tag">DevOps Engineer</div>
+      <div class="profiel-tag">Data Engineer</div>
+      <div class="profiel-tag">Security Specialist</div>
+      <div class="profiel-tag">Solution Architect</div>
+      <div class="profiel-tag">IT Project Manager</div>
+      <div class="profiel-tag">Product Owner</div>
+      <div class="profiel-tag">Scrum Master</div>
+      <div class="profiel-tag">IT Manager</div>
     </div>
   </section>
 
   <!-- WERKWIJZE -->
   <section class="werkwijze" id="werkwijze">
-    <div class="section-label fade-up">Werkwijze</div>
-    <h2 class="fade-up">Hoe wij werken</h2>
-    <p class="section-intro fade-up">Een helder en persoonlijk proces — van intake tot succesvolle plaatsing.</p>
+    <div class="section-label">Werkwijze</div>
+    <h2>Hoe wij werken</h2>
+    <p class="section-intro">Een helder en persoonlijk proces — van intake tot succesvolle plaatsing.</p>
     <div class="stappen">
-      <div class="stap fade-up delay-1">
+      <div class="stap">
         <div class="stap-header">
           <div class="stap-nummer">01</div>
           <div class="stap-lijn"></div>
@@ -174,7 +174,7 @@
         <h3>Intake gesprek</h3>
         <p>Wij leren uw organisatie en de specifieke vraag kennen. Geen formulieren, gewoon een direct gesprek.</p>
       </div>
-      <div class="stap fade-up delay-2">
+      <div class="stap">
         <div class="stap-header">
           <div class="stap-nummer">02</div>
           <div class="stap-lijn"></div>
@@ -182,7 +182,7 @@
         <h3>Profiel opstellen</h3>
         <p>Op basis van het gesprek stellen wij een concreet zoekprofiel op, afgestemd op uw context en cultuur.</p>
       </div>
-      <div class="stap fade-up delay-3">
+      <div class="stap">
         <div class="stap-header">
           <div class="stap-nummer">03</div>
           <div class="stap-lijn"></div>
@@ -190,7 +190,7 @@
         <h3>Selectie</h3>
         <p>Wij presenteren uitsluitend kandidaten die wij persoonlijk kennen en geschikt achten. Geen bulk.</p>
       </div>
-      <div class="stap fade-up delay-4">
+      <div class="stap">
         <div class="stap-header">
           <div class="stap-nummer">04</div>
           <div class="stap-lijn"></div>
@@ -204,7 +204,7 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="contact-grid">
-      <div class="contact-info fade-left">
+      <div class="contact-info">
         <div class="section-label">Contact</div>
         <h2>Neem contact op</h2>
         <p>Heeft u een concrete vraag of wilt u kennismaken? Wij reageren binnen één werkdag.</p>
@@ -213,13 +213,13 @@
             <div class="contact-detail-icon">
               <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-            Tübingen, Duitsland
+            Rotterdam
           </div>
           <div class="contact-detail">
             <div class="contact-detail-icon">
               <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dfabb0bdb6beac9fbdbabbadb6b5b9f2bbb6b8b6abbebeb3f1b1b3">[email&#160;protected]</a>
+            tobias@bedrijf-digitaal.nl
           </div>
           <div class="contact-detail">
             <div class="contact-detail-icon">
@@ -233,7 +233,7 @@
           <p>Momenteel hebben wij capaciteit voor nieuwe detacherings- en wervingsopdrachten. Neem gerust contact op voor een vrijblijvend kennismakingsgesprek.</p>
         </div>
       </div>
-      <div class="contact-form fade-right">
+      <div class="contact-form">
         <div class="form-row">
           <div class="form-group">
             <label>Voornaam</label>
@@ -263,4 +263,10 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="logo">Aevon Talent</
+    <div class="logo">Aevon Talent</div>
+    <p>© 2025 Aevon Talent. IT Detachering & Werving.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
