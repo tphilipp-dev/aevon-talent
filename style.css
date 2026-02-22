@@ -22,6 +22,7 @@
       padding: 16px 6%; background: rgba(255,255,255,0.85);
       backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
       position: sticky; top: 0; z-index: 100;
+      height: 57px;
     }
     .logo { font-size: 18px; font-weight: 700; letter-spacing: -0.5px; }
     .nav-links { display: flex; gap: 36px; }
@@ -38,8 +39,12 @@
 
     /* ─── HERO ─── */
     .hero {
-      height: 100dvh; display: flex; flex-direction: column;
-      padding: 0 6%; position: relative; overflow: hidden;
+      height: calc(100dvh - 57px);
+      display: flex;
+      flex-direction: column;
+      padding: 0 6%;
+      position: relative;
+      overflow: hidden;
     }
     canvas {
       position: absolute; top: 0; left: 0;
