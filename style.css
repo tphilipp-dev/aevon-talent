@@ -16,6 +16,10 @@
       overflow-x: hidden;
     }
 
+    html {
+     scroll-behavior: smooth;
+    }
+
     /* ─── NAV ─── */
     .nav {
       display: flex; align-items: center; justify-content: space-between;
