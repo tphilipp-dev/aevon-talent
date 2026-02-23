@@ -341,12 +341,6 @@
 
       footer { flex-direction: column; gap: 12px; text-align: center; }
 
-     canvas { position: absolute; }
-     top: 57px;
-     left: 0;
-     width: 100%;
-     height: calc(100svh - 57px - 69px);
-     z-index: 0;
 }
        
     }
