@@ -310,8 +310,10 @@
       .nav-links, .nav-cta { display: none; }
       .nav-hamburger { display: flex; }
 
-      .hero { height: auto; min-height: calc(100vh - 57px); }
-      h1 { font-size: 42px; letter-spacing: -2px; }
+      .hero { height: 100dvh; }
+      h1 { font-size: 32px; letter-spacing: -1.5px; }
+      .tag { margin-bottom: 16px; }
+      .bottom-row p { font-size: 14px; }
       .indent { padding-left: 40px; }
       .bottom-row { flex-direction: column; align-items: flex-start; gap: 24px; }
       .cta { width: 100%; text-align: center; }
