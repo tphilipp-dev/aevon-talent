@@ -341,8 +341,7 @@
 
       footer { flex-direction: column; gap: 12px; text-align: center; }
 
-      canvas {
-     position: fixed;
+     canvas { position: absolute; }
      top: 57px;
      left: 0;
      width: 100%;
