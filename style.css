@@ -340,5 +340,5 @@
 
       footer { flex-direction: column; gap: 12px; text-align: center; }
 
-      canvas { position: fixed; }
+      canvas { display: none; }
     }
