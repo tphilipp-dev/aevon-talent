@@ -60,3 +60,12 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(el => {
   observer.observe(el);
 });
+
+function acceptCookie() {
+  localStorage.setItem('cookieAccepted', 'true');
+  document.getElementById('cookieBanner').style.display = 'none';
+}
+
+if (localStorage.getItem('cookieAccepted')) {
+  document.getElementById('cookieBanner').style.display = 'none';
+}
