@@ -266,6 +266,45 @@
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
 
+/* ─── WHATSAPP ─── */
+.whatsapp-btn {
+  position: fixed; bottom: 32px; left: 32px; z-index: 999;
+  display: flex; align-items: center; gap: 10px;
+  background: var(--dark); color: white;
+  padding: 12px 20px; border-radius: 50px;
+  text-decoration: none; font-size: 14px; font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+.whatsapp-btn:hover { background: #1E293B; transform: translateY(-2px); }
+.whatsapp-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* ─── COOKIE BANNER ─── */
+.cookie-banner {
+  position: fixed; bottom: 32px; right: 32px; z-index: 999;
+  background: white; border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px 24px;
+  max-width: 320px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  animation: slideUp 0.4s ease;
+}
+.cookie-banner p { font-size: 13px; color: var(--mid); line-height: 1.6; margin-bottom: 16px; }
+.cookie-banner a { color: var(--blue); text-decoration: none; }
+.cookie-banner a:hover { text-decoration: underline; }
+.cookie-buttons { display: flex; gap: 10px; }
+.cookie-accept {
+  flex: 1; padding: 9px; background: var(--dark); color: white;
+  border: none; border-radius: 6px; font-size: 13px; font-weight: 500;
+  cursor: pointer; font-family: 'Inter', sans-serif; transition: background 0.2s;
+}
+.cookie-accept:hover { background: #1E293B; }
+.cookie-decline {
+  flex: 1; padding: 9px; background: transparent; color: var(--mid);
+  border: 1px solid var(--border); border-radius: 6px; font-size: 13px;
+  font-weight: 500; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s;
+}
+.cookie-decline:hover { border-color: var(--dark); color: var(--dark); }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
     /* ─── MOBILE ─── */
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
