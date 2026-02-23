@@ -75,3 +75,11 @@ document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}
 window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
 });
+
+if (window.innerWidth < 768) {
+  const hero = document.querySelector('.hero');
+  window.addEventListener('scroll', () => {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    canvas.style.opacity = heroBottom > 0 ? '1' : '0';
+  });
+}
