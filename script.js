@@ -70,3 +70,8 @@ function acceptCookie() {
 if (localStorage.getItem('cookieAccepted')) {
   document.getElementById('cookieBanner').style.display = 'none';
 }
+
+document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+window.addEventListener('resize', () => {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+});
