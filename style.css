@@ -328,7 +328,8 @@
 
       .diensten-grid { grid-template-columns: 1fr; }
 
-      .profielen-grid { grid-template-columns: repeat(3, 1fr); }
+      .profielen-grid { grid-template-columns: repeat(2, 1fr); }
+      .profiel-tag { font-size: 11px; padding: 10px 12px; }
 
       .stappen { grid-template-columns: 1fr; gap: 40px; }
       .stap-lijn { display: none; }
