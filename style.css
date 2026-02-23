@@ -269,15 +269,15 @@
 /* ─── WHATSAPP ─── */
 .whatsapp-btn {
   position: fixed; bottom: 32px; left: 32px; z-index: 999;
-  display: flex; align-items: center; gap: 10px;
-  background: var(--dark); color: white;
-  padding: 12px 20px; border-radius: 50px;
-  text-decoration: none; font-size: 14px; font-weight: 500;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  display: flex; align-items: center;
+  background: var(--blue); color: white;
+  padding: 14px; border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.3);
   transition: background 0.2s, transform 0.2s;
 }
-.whatsapp-btn:hover { background: #1E293B; transform: translateY(-2px); }
-.whatsapp-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+.whatsapp-btn:hover { background: #1D4ED8; transform: translateY(-2px); }
+.whatsapp-btn svg { width: 22px; height: 22px; }
 
 /* ─── COOKIE BANNER ─── */
 .cookie-banner {
