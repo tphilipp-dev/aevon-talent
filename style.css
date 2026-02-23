@@ -310,12 +310,13 @@
       .nav-links, .nav-cta { display: none; }
       .nav-hamburger { display: flex; }
 
-      .hero { height: calc(100dvh - 57px); }
+      .hero { height: calc(var(--vh, 1vh) * 100 - 57px); }
       h1 { font-size: 28px; letter-spacing: -1px; }
       .tag { margin-bottom: 12px; font-size: 10px; }
-      .bottom-row { gap: 16px; }
+      .bottom-row { flex-direction: column; align-items: flex-start; gap: 24px; }
       .bottom-row p { font-size: 13px; line-height: 1.6; }
       .cta { padding: 12px 20px; font-size: 14px; }
+      .cta { width: 100%; text-align: center; }
       h1 { margin-bottom: 20px; }
 
       section { padding: 64px 6%; }
