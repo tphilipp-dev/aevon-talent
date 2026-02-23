@@ -337,8 +337,10 @@
 
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       .form-row { grid-template-columns: 1fr; }
+      .contact-form { padding: 24px 20px; }
 
       footer { flex-direction: column; gap: 12px; text-align: center; }
 
       canvas { display: none; }
+       
     }
