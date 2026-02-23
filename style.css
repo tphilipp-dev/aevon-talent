@@ -338,4 +338,6 @@
       .form-row { grid-template-columns: 1fr; }
 
       footer { flex-direction: column; gap: 12px; text-align: center; }
+
+      canvas { position: fixed; }
     }
