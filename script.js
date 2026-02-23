@@ -3,7 +3,8 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particles = [];
-for (let i = 0; i < 120; i++) {
+const particleCount = window.innerWidth < 768 ? 40 : 120;
+for (let i = 0; i < particleCount; i++) {
   particles.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
