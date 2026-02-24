@@ -1,9 +1,20 @@
+// ─── CANVAS & PARTICLES ───
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+
+// Functie om de canvas exact de grootte van zijn container te geven
+function resizeCanvas() {
+  canvas.width = canvas.parentElement.offsetWidth;
+  canvas.height = canvas.parentElement.offsetHeight;
+}
+
+// Stel het formaat 1x in bij het laden
+resizeCanvas();
+
 const particles = [];
 const particleCount = window.innerWidth < 768 ? 40 : 120;
+
+// Maak de deeltjes aan
 for (let i = 0; i < particleCount; i++) {
   particles.push({
     x: Math.random() * canvas.width,
@@ -14,6 +25,8 @@ for (let i = 0; i < particleCount; i++) {
     opacity: Math.random() * 0.6 + 0.2
   });
 }
+
+// Teken de lijnen tussen de deeltjes
 function drawLines() {
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
@@ -31,6 +44,8 @@ function drawLines() {
     }
   }
 }
+
+// Animeer de boel
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   particles.forEach(p => {
@@ -46,11 +61,19 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
+// FIX: Voorkom het "squish" effect op mobiel door de adresbalk
+let cachedWidth = window.innerWidth;
 window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  const newWidth = window.innerWidth;
+  // Alleen opnieuw schalen als de breedte écht verandert of op desktop
+  if (newWidth !== cachedWidth || newWidth > 768) {
+    resizeCanvas();
+    cachedWidth = newWidth;
+  }
 });
 
+// ─── SCROLL ANIMATIES (FADE-INS) ───
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -58,12 +81,14 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.15 });
+
 document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(el => {
   observer.observe(el);
 });
 
-function acceptCookie() {
-  localStorage.setItem('cookieAccepted', 'true');
+// ─── COOKIE BANNER ───
+function handleCookie(accepted) {
+  localStorage.setItem('cookieAccepted', accepted ? 'true' : 'false');
   document.getElementById('cookieBanner').style.display = 'none';
 }
 
@@ -71,15 +96,15 @@ if (localStorage.getItem('cookieAccepted')) {
   document.getElementById('cookieBanner').style.display = 'none';
 }
 
-document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-window.addEventListener('resize', () => {
-  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-});
+window.acceptCookie = () => handleCookie(true);
+window.declineCookie = () => handleCookie(false);
 
+// ─── PERFORMANCE OPTIMALISATIE VOOR MOBIEL ───
 if (window.innerWidth < 768) {
   const hero = document.querySelector('.hero');
   window.addEventListener('scroll', () => {
     const heroBottom = hero.getBoundingClientRect().bottom;
+    // Verberg canvas als je voorbij de hero bent gescrold (scheelt batterij)
     canvas.style.opacity = heroBottom > 0 ? '1' : '0';
   });
 }
